@@ -18,8 +18,9 @@ and d.department_name in ('IT'，'Sales')
 GROUP BY department_name;
 ```
 结果：  
-![images]()
-
+![images](https://github.com/ataoxia/oracle/blob/master/test1/1.png)
+分析：  
+![images](https://github.com/ataoxia/oracle/blob/master/test1/11.png)
 - 查询2：
 ```SQL
 SELECT d.department_name，count(e.job_id)as "部门总人数"，
@@ -29,20 +30,10 @@ WHERE d.department_id = e.department_id
 GROUP BY department_name
 HAVING d.department_name in ('IT'，'Sales');
 ```
+结果：  
+![images](https://github.com/ataoxia/oracle/blob/master/test1/2.png)
+分析：  
+![images](https://github.com/ataoxia/oracle/blob/master/test1/22.png)
+自定义分析：  
+![images](https://github.com/ataoxia/oracle/blob/master/test1/3.png)
 
-执行上面两个比较复杂的返回相同查询结果数据集的SQL语句，通过分析SQL语句各自的执行计划，判断哪个SQL语句是最优的。最后将你认为最优的SQL语句通过sqldeveloper的优化指导工具进行优化指导，看看该工具有没有给出优化建议
-
-## 实验参考地址
-- Oracle地址：202.115.82.8 用户名：hr ， 密码123， 数据库名称：pdborcl，端口号：1521
-
-
-## 实验注意事项，完成时间： 2018-10-17日前上交
-- 请按时完成实验，过时扣分。
-- 查询语句及分析文档`必须提交`到：你的Oracle项目中的test1目录中。
-- 上交后，通过这个地址应该可以打开你的源码：https://github.com/你的用户名/Oracle/tree/master/test1
-- 实验分析及结果文档说明书用Markdown格式k编写。
-
-## 评分标准
-- 实验独立完成，有详细的分析文档。（总分20分）
-- 分析教材中的文档（总分40分）
-- 分析自定义查询的文档（总分40分）
