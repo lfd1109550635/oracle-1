@@ -24,14 +24,14 @@ GRANT CON_RES_VIEW_LMQ TO NEW_USER_LMQ;	    //将角色权限授予用户
 
 
 
-![运行结果](https://github.com/liumengqi77/oracle/blob/master/test2/1.png)
+![运行结果](https://github.com/ataoxia/oracle/blob/master/test2/1.png)
 
 
 - 第2步：新用户new_user连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
 
 GRANT SELECT ON MYVIEW_WTS TO hr;    //将MYVIEW_WTS的SELECT对象权限授予hr用户
 
-![运行结果](https://github.com/liumengqi77/oracle/blob/master/test2/2.png)
+![运行结果](https://github.com/ataoxia/oracle/blob/master/test2/2.png)
 
 
 - 第3步：用户hr连接到pdborcl，查询new_user授予它的视图myview
@@ -39,7 +39,7 @@ GRANT SELECT ON MYVIEW_WTS TO hr;    //将MYVIEW_WTS的SELECT对象权限授予h
 SELECT * FROM NEW_USER_WTS.MYVIEW_LMQ;  //登录HR用户查询MYVIEW_LMQ视图
 
 
-![运行结果](https://github.com/liumengqi77/oracle/blob/master/test2/3.png)
+![运行结果](https://github.com/ataoxia/oracle/blob/master/test2/3.png)
 
 实验分析
  对象，拥有者（即创建者）拥有所有权限，Oracle允许将对象的某些权限授予其他用户，以此能实现用户之间共享对象的权限。 
